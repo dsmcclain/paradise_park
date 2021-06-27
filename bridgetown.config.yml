@@ -21,6 +21,7 @@ url: "" # the base hostname & protocol for your site, e.g. https://example.com
 permalink: simple
 
 content_engine: resource
+template_engine: erb
 
 collections:
   stories:
