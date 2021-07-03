@@ -1,7 +1,17 @@
----
-layout: default
----
+<!doctype html>
+<html lang="en">
+  <head>
+    <%=render Head.new(page.data[:title])%>
+  </head>
+  <body class="<%= page.data[:layout] %> <%= page.data[:page_class] %>">
+    <%= render HomeTop.new %>
+    <%= render HomeHero.new('images/meadow.jpg', 'A beautiful meadow') %>
+    <%= render Navbar.new %>
 
-<h1>Home Page</h1>
+    <main>
+      <%= content %>
+    </main>
 
-<%= content %>
+        <%= render Footer.new %>
+  </body>
+</html>
