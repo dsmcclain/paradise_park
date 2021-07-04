@@ -1,5 +1,5 @@
 class Head < Bridgetown::Component
-  def initialize(title)
+  def initialize(title=nil)
     @title = title
     @metadata = Bridgetown::Current.site.metadata
   end

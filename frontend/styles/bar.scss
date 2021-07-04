@@ -1,0 +1,20 @@
+.bar-container {
+  background-color: black;
+}
+
+.bar-label {
+  color: white;
+  text-align: right;
+  text-transform: lowercase;
+}
+
+.bar-container.caption {
+  position: relative;
+  bottom: 30vh;
+  font-size: 1.2em;
+}
+
+.bar-label.caption {
+  position: relative;
+  right:20%;
+}

@@ -1,4 +1,5 @@
 @import "card.scss";
+@import "bar.scss";
 
 $body-background: #fafafa;
 $body-color: #444;
@@ -28,7 +29,7 @@ nav {
 
 .showroom-img {
   width: 100%;
-  height: 100%;
+  height: 110vh;
   object-fit: cover;
 }
 
