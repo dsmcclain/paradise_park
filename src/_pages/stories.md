@@ -1,14 +1,14 @@
 ---
 layout: page
-title: Posts
-permalink: /posts/
+title: Stories
+permalink: /stories/
 ---
-
+<!-- I can't tell where I want to loop over the collection of stories. Here or in page.erb -->
 <ul>
   <% for post in collections.posts.resources %>
     <li>
       <a href="<%= post.absolute_url %>"><%= post.data[:title] %></a>
-    </li>
+    </li>s
   <% end %>
 </ul>
 <h2>Stories:</h2>

@@ -1,0 +1,3 @@
+# access variables defined in this file via site.data.site_text
+
+test: 'hello_world'

@@ -1,4 +1,4 @@
-class HomeTop < Bridgetown::Component
+class Landing < Bridgetown::Component
   def initialize
     @site = Bridgetown::Current.site
     @title = @site.metadata[:title]

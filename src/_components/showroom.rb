@@ -1,4 +1,4 @@
-class HomeHero
+class Showroom
   def initialize(image, description)
     @image = image
     @description = description
@@ -6,7 +6,7 @@ class HomeHero
 
   def render_in(context)
     <<~HTML
-      <img class="home-hero-img" src="#{@image}" alt="#{@description}">
+      <img class="showroom-img" src="#{@image}" alt="#{@description}">
     HTML
   end
 end

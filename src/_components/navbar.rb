@@ -4,7 +4,8 @@ class Navbar
       <nav>
         <a href="/">Home</a>
         <a href="/about">About</a>
-        <a href="/posts">Posts</a>
+        <a href="/stories">Stories</a>
+        <a href="/flowers">Flowers</a>
       </nav>
     HTML
   end

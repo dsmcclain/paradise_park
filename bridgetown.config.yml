@@ -28,5 +28,7 @@ collections:
     output: true
   flowers:
     output: true
+  meadows:
+    output: true
 
 # timezone: America/Los_Angeles
