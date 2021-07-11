@@ -4,4 +4,8 @@ class Card < Bridgetown::Component
     @label = label
     @description = description
   end
+
+  def extra_classes
+    return 'trimmed' if @label.nil?
+  end
 end

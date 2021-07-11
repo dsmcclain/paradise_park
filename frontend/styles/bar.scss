@@ -8,6 +8,19 @@
   text-transform: lowercase;
 }
 
+// TITLE STYLES
+
+.bar-container.title {
+  margin: 30px auto;
+  width: 33%;
+}
+
+.bar-label.title {
+  text-align: center;
+}
+
+// CAPTION STYLES
+
 .bar-container.caption {
   position: relative;
   bottom: 30vh;

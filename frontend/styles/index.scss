@@ -1,7 +1,8 @@
 @import "card.scss";
 @import "bar.scss";
+@import "tray.scss";
 
-$body-background: #fafafa;
+$body-background: darkgray;
 $body-color: #444;
 
 body, html {
@@ -12,6 +13,7 @@ body {
   background: $body-background;
   color: $body-color;
   font-family: sans-serif;
+  margin: 0px;
 }
 
 h1, nav, footer {
@@ -19,7 +21,6 @@ h1, nav, footer {
 }
 
 main {
-  margin: 4rem auto;
   max-width: 60rem;
 }
 
@@ -27,23 +28,56 @@ nav {
   background-color: lightpink;
 }
 
+// LANDING PAGE STYLES
+
+.landing {
+  height: 100%;
+  background-color: antiquewhite;
+}
+
+.landing-screen {
+  position: absolute;
+  background-position: center center;
+  content: '';
+  height: 100%;
+  width: 100%;
+  transition: all .3s ease-in-out;
+}
+
+.blurred {
+  filter: blur(15px);
+  -webkit-filter: blur(15px);
+  opacity: 25%;
+}
+
+.landing-image {
+  height: 100%;
+  background-image: url('/images/main-meadow.jpeg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.landing-info-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  position: relative;
+  margin-right: 35vw;
+  margin-left: 3vw;
+}
+
+.site-title {
+  font-size: 5vw;
+  margin: 16px;
+  white-space: nowrap;
+}
+
+// SHOWROOM PAGE STYLES
+
 .showroom-img {
   width: 100%;
   height: 110vh;
   object-fit: cover;
-}
-
-.landing {
-  background-color: antiquewhite;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  height: 100%
-}
-
-.card-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
 }

@@ -3,12 +3,33 @@
   flex-direction: column;
   align-items: center;
   max-width: 300px;
-  padding: 5px;
+  margin: 10px;
 }
 
 .card-image {
   border-radius: 50%;
-  max-width: 300px;
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.card-screen {
+  border-radius: 50%;
+  z-index: 10;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  opacity: 80%;
+  content: '';
+  background-color: aliceblue;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.trimmed {
+  max-height: 300px;
 }
 
 .card-label {

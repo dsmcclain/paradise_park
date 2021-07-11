@@ -1,8 +1,9 @@
-<div>
+<div class="tray-wrapper">
+  <%= render Bar.new(@category, 'title') %>
   <div class="card-section">
-    <%# render Bar.new(@category) %>
     <%= render Card.new('beargrass-opening.jpeg', 'Beargrass', 'flowering beargrass in early bloom') %>
     <%= render Card.new('beargrass-opening.jpeg', 'Beargrass', 'flowering beargrass in early bloom') %>
     <%= render Card.new('beargrass-opening.jpeg', 'Beargrass', 'flowering beargrass in early bloom') %>
   </div>
+  <a class="tray-link" href="/<%= @category %>">View all <%= @category %> >></a>
 </div>

@@ -1,4 +1,34 @@
 <div class="landing">
-  <%= render Card.new('beargrass-opening.jpeg', nil, 'the signpost at paradise park') %>
-  <h1><%= @title %></h1>
+
+  <div class="landing-screen blurred" id="screen">
+    <div class="landing-image"></div>
+  </div>
+
+  <div class="landing-info-wrapper">
+    <div class="landing-card-wrapper" onmouseenter="cardBlur()" onmouseleave="backgroundBlur()">
+      <%= render Card.new('beargrass-opening.jpeg', nil, 'the signpost at paradise park') %>
+    </div>
+    <h1 class="site-title"><%= @title %></h1>
+  </div>
+
 </div>
+
+<script type="text/javascript">
+  function cardBlur() {
+    const screen = document.querySelector('#screen')
+    screen.classList.remove('blurred')
+    const cardScreen = document.querySelector('.card-screen')
+    cardScreen.classList.remove('hidden')
+    const siteTitle= document.querySelector('.site-title')
+    siteTitle.classList.add('hidden')
+  }
+
+  function backgroundBlur() {
+    const screen = document.querySelector('#screen')
+    screen.classList.add('blurred')
+    const cardScreen = document.querySelector('.card-screen')
+    cardScreen.classList.add('hidden')
+    const siteTitle= document.querySelector('.site-title')
+    siteTitle.classList.remove('hidden')
+  }
+</script>

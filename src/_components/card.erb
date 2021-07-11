@@ -1,4 +1,7 @@
-<div class="card-wrapper">
-  <img class="card-image" src="<%= @image %>" alt="<%= @description %>">
+<div class="card-wrapper <%= extra_classes %>">
+  <div class="image-wrapper">
+    <div class="card-screen hidden"></div>
+    <img class="card-image" src="<%= @image %>" alt="<%= @description %>">
+  </div>
   <h3 class="card-label"><%= @label %></h3>
 </div>
