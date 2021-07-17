@@ -1,5 +1,5 @@
 class Tray < Bridgetown::Component
-  def initialize(category = 'undefined')
-    @category = category
+  def initialize(scene = 'undefined')
+    @scene = scene
   end
 end

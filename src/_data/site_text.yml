@@ -1,3 +1,6 @@
-# access variables defined in this file via site.data.site_text
+# site.data.site_text[:example]
+# ^access variables defined in this file via site.data.site_text
 
-test: 'hello_world'
+
+example: 'hello_world'
+showroom_title: 'mount hood in the anthropocene'

@@ -4,12 +4,14 @@
     <div class="landing-image"></div>
   </div>
 
+<%# This segment needs to be extracted to its own component - Beacon? %>
   <div class="landing-info-wrapper">
     <div class="landing-card-wrapper" onmouseenter="cardBlur()" onmouseleave="backgroundBlur()">
-      <%= render Card.new('beargrass-opening.jpeg', nil, 'the signpost at paradise park') %>
+      <%= render Card.new('beargrass-opening.jpeg', 'the signpost at paradise park') %>
     </div>
     <h1 class="site-title"><%= @title %></h1>
   </div>
+<%# End Beacon Component %>
 
 </div>
 

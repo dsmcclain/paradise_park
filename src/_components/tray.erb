@@ -1,9 +1,14 @@
 <div class="tray-wrapper">
-  <%= render Bar.new(@category, 'title') %>
-  <div class="card-section">
-    <%= render Card.new('beargrass-opening.jpeg', 'Beargrass', 'flowering beargrass in early bloom') %>
-    <%= render Card.new('beargrass-opening.jpeg', 'Beargrass', 'flowering beargrass in early bloom') %>
-    <%= render Card.new('beargrass-opening.jpeg', 'Beargrass', 'flowering beargrass in early bloom') %>
+  <div class="tray-screen <%= @scene %>" id="<%= @scene %>-screen">
+    <div class="tray-img"></div>
+    <%= render Bar.new('stories', 'caption') %>
   </div>
-  <a class="tray-link" href="/<%= @category %>">View all <%= @category %> >></a>
+
+  <div class="tray-info-wrapper">
+    <div class="card-section">
+      <%= render Card.new('beargrass-opening.jpeg', 'flowering beargrass in early bloom') %>
+      <%= render Card.new('beargrass-opening.jpeg', 'flowering beargrass in early bloom') %>
+      <%= render Card.new('beargrass-opening.jpeg', 'flowering beargrass in early bloom') %>
+    </div>
+  </div>
 </div>
