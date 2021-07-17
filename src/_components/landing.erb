@@ -6,8 +6,8 @@
 
 <%# This segment needs to be extracted to its own component - Beacon? %>
   <div class="landing-info-wrapper">
-    <div class="landing-card-wrapper" onmouseenter="cardBlur()" onmouseleave="backgroundBlur()">
-      <%= render Card.new('beargrass-opening.jpeg', 'the signpost at paradise park') %>
+    <div class="landing-card-wrapper" onmouseenter="landingCardBlur()" onmouseleave="backgroundBlur()">
+      <%= render Card.new('landing-image', 'beargrass-opening.jpeg', 'the signpost at paradise park') %>
     </div>
     <h1 class="site-title"><%= @title %></h1>
   </div>
@@ -16,7 +16,7 @@
 </div>
 
 <script type="text/javascript">
-  function cardBlur() {
+  function landingCardBlur() {
     const screen = document.querySelector('#screen')
     screen.classList.remove('blurred')
     const cardScreen = document.querySelector('.card-screen')

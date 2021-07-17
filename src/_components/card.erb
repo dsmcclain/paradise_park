@@ -1,6 +1,6 @@
-<div class="card-wrapper">
+<div class="card-wrapper <%= @scene %>-card">
   <div class="image-wrapper">
-    <div class="card-screen hidden"></div>
+    <div class="card-screen hidden" id="<%= @title %>-screen"></div>
     <img class="card-image" src="<%= @image %>" alt="<%= @description %>">
   </div>
 </div>
