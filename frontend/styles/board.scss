@@ -5,14 +5,14 @@
   width: 100%;
 }
 
-.tray-link {
+.board-link {
   display: flex;
   justify-content: flex-end;
   margin-right: 30px;
   text-transform: lowercase;
 }
 
-.tray-screen {
+.board-screen {
   position: absolute;
   background-position: center center;
   content: '';
@@ -21,7 +21,7 @@
   transition: all .3s ease-in-out;
 }
 
-.tray-img {
+.board-img {
   width: 100%;
   height: 110vh;
   background-repeat: no-repeat;
@@ -29,15 +29,15 @@
   transition: all .3s ease-in-out;
 }
 
-.tray-img.default {
+.board-img.default {
   background-image: url('/images/second-meadow.jpeg');
 }
 
-.tray-img.beargrass {
-  background-image: url('/images/beargrass-opening.jpeg');
+.board-img.beargrass {
+  background-image: url('/images/beargrass-ball.jpg');
 }
 
-.tray-info-wrapper {
+.board-info-wrapper {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -46,6 +46,6 @@
   height: 100%;
 }
 
-.tray-wrapper {
+.board-wrapper {
   height: 110vh;
 }

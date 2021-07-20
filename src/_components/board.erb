@@ -1,0 +1,47 @@
+<div class="board-wrapper">
+  <div class="board-screen <%= @scene %>" id="<%= @scene %>-screen">
+    <div class="board-img default" id="<%= @scene %>-img"></div>
+    <%= render Bar.new('stories', 'caption', @scene) %>
+  </div>
+
+  <div class="board-info-wrapper">
+    <div class="card-section">
+      <% @cards.each_with_index do |card, i| %>
+        <div class="board-card-wrapper" onmouseenter="cardBlur('<%= @scene %>', <%= i %>, '<%= card['title'].gsub(' ', '-') %>')" onmouseleave="screenBlur('<%= @scene %>', '<%= card['title'].gsub(' ', '-') %>')">
+          <%= render Card.new(card['title'], card['image'], 'flowering beargrass in early bloom', @scene) %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  function cardBlur(scene, index, title) {
+    const screen = document.querySelector(`#${title}-screen`)
+    screen.classList.remove('hidden')
+    const cards = document.getElementsByClassName(`${scene}-card`)
+    Array.from(cards).forEach((card, i) => {
+      if (i !== index) {
+        card.style.visibility = 'hidden'
+      }
+    })
+
+    const bkgrnd = document.querySelector(`#${scene}-img`)
+    bkgrnd.classList.add('beargrass')
+
+    const bar = document.querySelector(`#${scene}-bar`)
+    bar.textContent = title
+  }
+
+  function screenBlur(scene, title) {
+    const screen = document.querySelector(`#${title}-screen`)
+    screen.classList.add('hidden')
+    const cards = document.getElementsByClassName(`${scene}-card`)
+    for(card of cards) {
+      card.style.visibility = 'visible'
+    }
+
+    const bkgrnd = document.querySelector(`#${scene}-img`)
+    bkgrnd.classList.remove('beargrass')
+  }
+</script>

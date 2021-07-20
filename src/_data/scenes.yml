@@ -1,0 +1,19 @@
+# site.data.scenes[:example]
+
+stories:
+  cards:
+    - title: 'beargrass'
+      image: 'beargrass-ball.jpg'
+    - title: 'western pasqueflower'
+      image: 'pasqueflower.jpg'
+    - title: 'beargrass pt 2'
+      image: 'beargrass-ball.jpg'
+
+flowers:
+  cards:
+    - title: 'beargrass redux'
+      image: 'beargrass-ball.jpg'
+    - title: 'western pasqueflower redux'
+      image: 'pasqueflower.jpg'
+    - title: 'beargrass pt 2 redux'
+      image: 'beargrass-ball.jpg'
