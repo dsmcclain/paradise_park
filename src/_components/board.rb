@@ -7,6 +7,9 @@ class Board < Bridgetown::Component
 
   def get_cards(scene)
     sym = scene.downcase.to_sym
-    @site.data.scenes[sym][:cards]
+    cards = @site.data.scenes[sym][:cards]
+    cards.each do |card|
+      card[:kebab_title] = card[:title].gsub(' ', '-')
+    end
   end
 end

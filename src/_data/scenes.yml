@@ -4,16 +4,22 @@ stories:
   cards:
     - title: 'beargrass'
       image: 'beargrass-ball.jpg'
+      alt: 'a tennis ball-sized bloom of beargrass'
     - title: 'western pasqueflower'
       image: 'pasqueflower.jpg'
+      alt: 'a western pasqueflower bloom entering its final blowout stage'
     - title: 'beargrass pt 2'
       image: 'beargrass-ball.jpg'
+      alt: 'a tennis ball-sized bloom of beargrass'
 
 flowers:
   cards:
     - title: 'beargrass redux'
       image: 'beargrass-ball.jpg'
+      alt: 'a tennis ball-sized bloom of beargrass'
     - title: 'western pasqueflower redux'
       image: 'pasqueflower.jpg'
+      alt: 'a western pasqueflower bloom entering its final blowout stage'
     - title: 'beargrass pt 2 redux'
       image: 'beargrass-ball.jpg'
+      alt: 'a tennis ball-sized bloom of beargrass'

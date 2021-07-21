@@ -1,14 +1,18 @@
 <div class="board-wrapper">
-  <div class="board-screen <%= @scene %>" id="<%= @scene %>-screen">
+  <div class="board-screen">
     <div class="board-img default" id="<%= @scene %>-img"></div>
-    <%= render Bar.new('stories', 'caption', @scene) %>
+    <div class="board-card-image" id="<%= @scene %>-board-card-image"></div>
+    <%= render Bar.new('stories', 'scene hidden', @scene) %>
   </div>
 
   <div class="board-info-wrapper">
     <div class="card-section">
       <% @cards.each_with_index do |card, i| %>
-        <div class="board-card-wrapper" onmouseenter="cardBlur('<%= @scene %>', <%= i %>, '<%= card['title'].gsub(' ', '-') %>')" onmouseleave="screenBlur('<%= @scene %>', '<%= card['title'].gsub(' ', '-') %>')">
-          <%= render Card.new(card['title'], card['image'], 'flowering beargrass in early bloom', @scene) %>
+        <div class="board-card-wrapper"
+          onmouseenter="highlightOneCard(<%= card.to_json %>, '<%= @scene %>', <%= i %>)"
+          onmouseleave="showAllCards('<%= @scene %>', '<%= card['kebab_title'] %>')"
+        >
+          <%= render Card.new(card['title'], card['image'], card['alt'], @scene) %>
         </div>
       <% end %>
     </div>
@@ -16,32 +20,71 @@
 </div>
 
 <script type="text/javascript">
-  function cardBlur(scene, index, title) {
+  // MOUSEENTER FUNCTIONS
+  function highlightOneCard(card, scene, index) {
+    changeBkgrnd(scene, card.image)
+    blurCard(card.kebab_title)
+    hideOtherCards(scene, index)
+    showBar(scene, card.kebab_title)
+  }
+
+  function changeBkgrnd(scene, image) {
+    const bkgrnd = document.querySelector(`#${scene}-board-card-image`)
+    bkgrnd.style.backgroundImage = `url('/images/${image}')`
+    bkgrnd.style.opacity = '100%'
+  }
+
+  function blurCard(title) {
     const screen = document.querySelector(`#${title}-screen`)
     screen.classList.remove('hidden')
+  }
+
+  function hideOtherCards(scene, index) {
     const cards = document.getElementsByClassName(`${scene}-card`)
     Array.from(cards).forEach((card, i) => {
       if (i !== index) {
         card.style.visibility = 'hidden'
       }
     })
-
-    const bkgrnd = document.querySelector(`#${scene}-img`)
-    bkgrnd.classList.add('beargrass')
-
-    const bar = document.querySelector(`#${scene}-bar`)
-    bar.textContent = title
   }
 
-  function screenBlur(scene, title) {
+  function showBar(scene, title) {
+    const bar = document.querySelector(`#${scene}-bar-container`)
+    const barLabel = bar.querySelector('.bar-label')
+    barLabel.textContent = title
+    bar.classList.remove('hidden')
+    barLabel.classList.remove('hidden')
+  }
+
+  // MOUSELEAVE FUNCTIONS
+  function showAllCards(scene, title) {
+    unblurCard(title)
+    revealAllCards(scene)
+    restoreBkgrnd(scene)
+    hideBar(scene)
+  }
+
+  function hideBar(scene, title) {
+    const bar = document.querySelector(`#${scene}-bar-container`)
+    const barLabel = bar.querySelector('.bar-label')
+    bar.classList.add('hidden')
+    barLabel.classList.add('hidden')
+  }
+
+  function unblurCard(title) {
     const screen = document.querySelector(`#${title}-screen`)
     screen.classList.add('hidden')
+  }
+
+  function restoreBkgrnd(scene) {
+    const bkgrnd = document.querySelector(`#${scene}-board-card-image`)
+    bkgrnd.style.opacity = '0%'
+  }
+
+  function revealAllCards(scene) {
     const cards = document.getElementsByClassName(`${scene}-card`)
     for(card of cards) {
       card.style.visibility = 'visible'
     }
-
-    const bkgrnd = document.querySelector(`#${scene}-img`)
-    bkgrnd.classList.remove('beargrass')
   }
 </script>
