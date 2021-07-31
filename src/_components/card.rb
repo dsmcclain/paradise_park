@@ -5,4 +5,8 @@ class Card < Bridgetown::Component
     @description = description
     @scene = scene
   end
+
+  def link?
+    !@title.include?('landing')
+  end
 end
