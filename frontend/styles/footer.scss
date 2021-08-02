@@ -7,6 +7,10 @@
   padding: 10px;
 }
 
+.footer-wrapper > * {
+  z-index: 2;
+}
+
 .footer-links {
   display: flex;
   flex-direction: row;

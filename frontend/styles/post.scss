@@ -1,0 +1,55 @@
+.post { 
+  background: linear-gradient(-137deg, #4a4a4a, black);
+  background-attachment: fixed;
+  margin: 0;
+}
+
+.post-header {
+  height: 20vh;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.post-body {
+  padding: 0 10vw;
+}
+
+.post-body > p {
+  padding: 10px;
+}
+
+.post-wrapper {
+  font-family: 'Impact Label', 'Courier New', monospace;
+}
+
+.post-content {
+  background: black;
+  color: white;
+  padding: 2px;
+  font-size: 2.2em;
+  line-height: 1.2;
+
+}
+
+.post-screen {
+  position: absolute;
+  background-position: center center;
+  height: 110vh;
+  width: 100%;
+  opacity: 25%;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  z-index: -10;
+  background: white;
+}
+
+.post-image {
+  height: 100%;
+  background-image: url('/images/main-meadow.jpeg');
+}
+
+.post-title {
+  background: black;
+  color: white;
+  font-size: 5em;
+}

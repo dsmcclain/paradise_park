@@ -2,9 +2,19 @@
 @import "bar.scss";
 @import "board.scss";
 @import "footer.scss";
+@import "post.scss";
+@font-face {
+  font-family: 'Impact Label';
+  src: url('../assets/ImpactLabelReversed.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Impact Label White';
+  src: url('../assets/ImpactLabel.ttf') format('truetype');
+  font-display: swap;
+}
 
 $body-background: black;
-$body-color: #444;
 
 body, html {
   height: 100%
@@ -12,17 +22,13 @@ body, html {
 
 body {
   background: $body-background;
-  color: $body-color;
   font-family: sans-serif;
+  color: white;
   margin: 0px;
 }
 
 h1, nav {
   text-align: center;
-}
-
-main {
-  max-width: 60rem;
 }
 
 nav {
@@ -65,14 +71,17 @@ nav {
   justify-content: space-around;
   height: 100%;
   position: relative;
-  margin-right: 35vw;
-  margin-left: 3vw;
+  margin-right: 28vw;
+  margin-left: 4vw;
 }
 
 .site-title {
-  font-size: 5vw;
+  font-size: 6vw;
   margin: 16px;
   white-space: nowrap;
+  font-family: 'Impact Label';
+  text-transform: uppercase;
+  color: #212121;
 }
 
 // SHOWROOM PAGE STYLES

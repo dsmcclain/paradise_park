@@ -3,9 +3,10 @@
 }
 
 .bar-label {
-  color: white;
+  font-family: 'Impact Label';
+  font-size: 1.7em;
   text-align: right;
-  text-transform: lowercase;
+  padding-top: 3px;
 }
 
 // TITLE STYLES
@@ -29,7 +30,7 @@
 
 .bar-label.caption {
   position: relative;
-  right:20%;
+  right: 18%;
 }
 
 .hidden {

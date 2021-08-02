@@ -3,8 +3,7 @@
     <div class="card-screen hidden" id="<%= @title %>-screen"></div>
     <img class="card-image" src="<%= @image %>" alt="<%= @description %>">
     <% if link? %>
-    <%# TODO: href should be to corresponding post %>
-      <a href="#top"><span class="card-link"></span></a>
+      <a href="<%= url %>"><span class="card-link"></span></a>
     <% end %>
   </div>
 </div>

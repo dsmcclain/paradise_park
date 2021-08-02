@@ -9,4 +9,8 @@ class Card < Bridgetown::Component
   def link?
     !@title.include?('landing')
   end
+
+  def url
+    [@scene, @title].join('/').downcase
+  end
 end

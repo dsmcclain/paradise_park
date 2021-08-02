@@ -3,7 +3,8 @@ layout: default
 ---
 
 <h1><%= page.data[:title] %></h1>
-<%# PageTop.new(page.data[:title]) %>
 <% collections.send(page.data[:title].downcase).each do |item| %>
-  <%= render PageSlot.new(item.data[:summary], item.data[:image]) %>
+  <%= render PageSlot.new(item.data) %>
 <% end %>
+
+<%= content %>
