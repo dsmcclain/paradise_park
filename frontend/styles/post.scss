@@ -18,6 +18,40 @@
   padding: 10px;
 }
 
+.post-body > img, .img-main > img {
+  max-width: 500px;
+  max-height: 500px;
+  margin: 15px;
+}
+
+.img-main {
+  position: relative;
+  background: url('/images/beargrass-ball.jpg');
+  height: 600px;
+  width: 600px;
+  background-size: contain;
+}
+
+.img-text {
+  position: absolute;
+  bottom: 100px;
+  right: 18px;
+  left: 15px;
+  text-align: right;
+}
+
+.img-right {
+  float: right;
+  border-radius: 5% 0 0 5%;
+  border-right: 20px solid black;
+}
+
+.img-left {
+  float: left;
+  border-radius: 0 5% 5% 0;
+  border-left: 20px solid black;
+}
+
 .post-wrapper {
   font-family: 'Impact Label', 'Courier New', monospace;
 }
