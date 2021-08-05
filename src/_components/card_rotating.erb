@@ -1,0 +1,34 @@
+<div class="card-wrapper <%= @scene %>-card">
+  <div class="image-wrapper">
+    <div class="card-screen hidden" id="<%= @title %>-screen"></div>
+    <img class="card-image" src="<%= initial_image %>" alt="<%= @description %>">
+    <% if link? %>
+      <a href="<%= url %>"><span class="card-link"></span></a>
+    <% end %>
+  </div>
+</div>
+
+<script type="text/javascript">
+  let i = 2
+  function change() {
+    img = document.querySelector('.card-image')
+    base = "<%= @image_base %>"
+    img.src = `/images/${base}-${i}.jpg`
+    i === <%= @image_number %> ? i = 1 : i++
+  }
+
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms))
+  }
+
+  window.onload = async function () {
+    let changes = 0
+    const limit = <%= @image_number * 2 %>
+    while (changes < limit) {
+      await sleep(2000)
+      change()
+      changes++
+    }
+    setInterval(change, 400)
+  }
+</script>

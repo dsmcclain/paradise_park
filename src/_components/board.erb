@@ -12,7 +12,7 @@
           onmouseenter="highlightOneCard(<%= card.to_json %>, '<%= @scene %>', <%= i %>)"
           onmouseleave="showAllCards('<%= @scene %>', '<%= card['kebab_title'] %>')"
         >
-          <%= render Card.new(card['title'], card['image'], card['alt'], @scene) %>
+          <%= render Card.new(card['title'], card['image'], card['alt'], scene: @scene) %>
         </div>
       <% end %>
     </div>
