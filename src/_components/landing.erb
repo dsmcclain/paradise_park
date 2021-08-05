@@ -17,8 +17,8 @@
   function landingCardBlur() {
     const screen = document.querySelector('#screen')
     screen.classList.remove('blurred')
-    const cardScreen = document.querySelector('.card-screen')
-    cardScreen.classList.remove('hidden')
+    const card = document.querySelector('.card-wrapper')
+    card.classList.add('hidden')
     const siteTitle= document.querySelector('.site-title')
     siteTitle.classList.add('hidden')
   }
@@ -26,8 +26,8 @@
   function backgroundBlur() {
     const screen = document.querySelector('#screen')
     screen.classList.add('blurred')
-    const cardScreen = document.querySelector('.card-screen')
-    cardScreen.classList.add('hidden')
+    const cardScreen = document.querySelector('.card-wrapper')
+    cardScreen.classList.remove('hidden')
     const siteTitle= document.querySelector('.site-title')
     siteTitle.classList.remove('hidden')
   }
